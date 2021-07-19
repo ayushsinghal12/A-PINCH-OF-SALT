@@ -27,17 +27,11 @@ function imgchange4() {
 
 window.addEventListener('scroll', animation);
 var items = document.querySelectorAll('#mainimgcontainer')
-var items2 = document.querySelectorAll('.card')
 
 function animation() {
     for (var i = 0; i < items.length; i++) {
         if (elementInViewport(items[i])) {
             items[i].classList.add('inview')
-        }
-    }
-    for (var i = 0; i < items2.length; i++) {
-        if (elementInViewport(items2[i])) {
-            items2[i].classList.add('inview2')
         }
     }
 }
