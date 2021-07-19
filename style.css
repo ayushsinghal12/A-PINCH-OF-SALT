@@ -1,0 +1,587 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    font-family: sans-serif;
+    width: 100%;
+    background: linear-gradient(to right, grey, rgb(59, 59, 59));
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    height: 50px;
+    transition: 0s;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 3px;
+    flex-direction: row;
+    transition: 0.5s;
+}
+
+li {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 13px;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+#navbar a:hover {
+    border: 0.7px solid white;
+    margin: 10px;
+    padding: 3px;
+}
+
+#menu {
+    position: fixed;
+    z-index: 2;
+    top: 6px;
+    left: 10px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.35s;
+}
+
+#menu div {
+    width: 30px;
+    border-radius: 4.2px;
+    height: 4px;
+    background-color: white;
+    margin: 7px;
+    transition: 0.35s;
+}
+
+#bar1,
+#bar2,
+#bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar1change {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.bar2change {
+    opacity: 0;
+}
+
+.bar3change {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#heading {
+    color: cyan;
+    font-size: 60px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#homepage {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.smallimg {
+    margin: 4vw 1.5vw 1vw 1.5vw;
+    height: 13vw;
+    width: 20vw;
+    border-radius: 1vw;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 2px solid blue;
+}
+
+.smallimg:hover {
+    transform: scale(1.17, 1.17)
+}
+
+#mainimg {
+    height: 40vw;
+    width: 60vw;
+    margin: 40px auto 0 auto;
+    display: block;
+}
+
+#mainimgcontainer {
+    width: 0px;
+    overflow-x: hidden;
+}
+
+.inview {
+    animation: mainimga linear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mainimga {
+    0% {
+        width: 0
+    }
+    100% {
+        width: 60vw
+    }
+}
+
+#phoneimgcontainer {
+    display: none;
+}
+
+hr {
+    width: 80%;
+    margin: 100px auto 100px auto;
+}
+
+.card {
+    opacity: 0;
+    width: 390px;
+    text-align: center;
+    color: purple;
+    background: white;
+    font-size: 25px;
+    font-family: sans-serif;
+    border-radius: 15px;
+    padding: 30px;
+    height: auto;
+    margin: 20px;
+    transition-duration: 1s;
+    transform: rotate(0deg);
+}
+
+.inview2 {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.card img {
+    border-radius: 15px;
+    transform: scale(1, 1);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    width: 370px;
+    height: 250px;
+}
+
+.card img:hover {
+    transform: scale(1.1, 1.1);
+    transition-property: transform;
+    transition-duration: 0.3s
+}
+
+.card:hover {
+    box-shadow: 10px 10px 10px blue
+}
+
+.card h3 {
+    color: orange;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    background: linear-gradient(to right, lightgreen, darkgreen);
+    margin-top: 35px;
+}
+
+.card a {
+    text-decoration: none
+}
+
+.card h3:hover {
+    color: yellow
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+iframe {
+    width: 450px;
+    height: 290px;
+    margin: 2vw;
+    border: 3px solid blue
+}
+
+#contact {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+#contact br {
+    margin: 10px;
+}
+
+.subheading {
+    color: cyan;
+    font-size: 35px !important;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 20px !important;
+    width: 100%
+}
+
+#contact div {
+    margin: 15px;
+    font-size: 22px;
+}
+
+#comment {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    color: blue;
+    font-size: 20px;
+    margin: 5px
+}
+
+input {
+    margin: 10px;
+    font-size: 18px;
+    width: 300px
+}
+
+input[type=submit] {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    color: red;
+    background: black;
+    border: 2px solid lime;
+    font-size: 18px;
+    width: auto
+}
+
+textarea {
+    margin: 10px;
+    font-size: 18px;
+    width: 600px;
+    height: 170px;
+    resize: none;
+}
+
+@media (min-width:850px) and (max-width:1050px) {
+    .card {
+        width: 310px
+    }
+    .card img {
+        width: 290px;
+        height: 185px
+    }
+    iframe {
+        width: 400px;
+        height: 250px;
+        margin: 5px;
+    }
+}
+
+@media (min-width:705px) and (max-width:850px) {
+    #mainimg {
+        height: 50vw;
+        width: 75vw
+    }
+    @keyframes mainimga {
+        0% {
+            width: 0
+        }
+        100% {
+            width: 75vw
+        }
+    }
+    .card {
+        width: 300px;
+        margin: 5px;
+        padding: 15px;
+        font-size: 17px;
+    }
+    .card h3 {
+        font-size: 22px;
+    }
+    .card img {
+        width: 280px;
+        height: 175px
+    }
+    iframe {
+        width: 600px;
+        height: 400px
+    }
+    #heading {
+        font-size: 40px;
+    }
+}
+
+@media (min-width:570px) and (max-width:705px) {
+    #mainimg {
+        height: 60vw;
+        width: 90vw
+    }
+    @keyframes mainimga {
+        0% {
+            width: 0
+        }
+        100% {
+            width: 90vw
+        }
+    }
+    #navbar {
+        justify-content: left;
+    }
+    #menu {
+        visibility: visible;
+        opacity: 1;
+    }
+    ul {
+        margin-top: 50px;
+        visibility: hidden;
+        opacity: 0;
+        flex-direction: column;
+        position: relative;
+        left: -300px;
+        transition-duration: 0.5s
+    }
+    .ulchange {
+        visibility: visible;
+        opacity: 1;
+        left: -5px
+    }
+    #navbar ul li {
+        background: rgba(156, 90, 243, 0.7);
+    }
+    .card {
+        width: 350px;
+        font-size: 20px;
+        padding: 15px;
+    }
+    .card img {
+        width: 330px;
+        height: 200px
+    }
+    .card h3 {
+        font-size: 26px;
+    }
+    #heading {
+        font-size: 40px;
+    }
+    #contact div {
+        margin: 8px;
+    }
+    input {
+        width: auto
+    }
+    textarea {
+        width: 400px;
+        height: 100px
+    }
+}
+
+@media (min-width:450px) and (max-width:570px) {
+    .smallimg {
+        width: 28vw;
+        height: 20vw
+    }
+    #mainimg {
+        width: 90vw;
+        height: 65vw;
+    }
+    @keyframes mainimga {
+        0% {
+            width: 0
+        }
+        100% {
+            width: 100vw
+        }
+    }
+    #navbar {
+        justify-content: left;
+    }
+    #menu {
+        visibility: visible;
+        opacity: 1;
+    }
+    ul {
+        visibility: hidden;
+        opacity: 0;
+    }
+    ul {
+        margin-top: 50px;
+        visibility: hidden;
+        opacity: 0;
+        flex-direction: column;
+        position: relative;
+        left: -300px
+    }
+    .ulchange {
+        visibility: visible;
+        opacity: 1;
+        left: -5px
+    }
+    #navbar ul li {
+        background: rgba(156, 90, 243, 0.7);
+    }
+    .card {
+        padding: 15px;
+        font-size: 18px;
+        width: 330px
+    }
+    .card img {
+        width: 310px;
+        height: 200px
+    }
+    .card h3 {
+        font-size: 25px;
+    }
+    iframe {
+        width: 370px;
+        height: 220px
+    }
+    #heading {
+        font-size: 40px;
+    }
+    hr {
+        margin: 80px auto 80px auto;
+    }
+    input {
+        width: auto
+    }
+    textarea {
+        width: 350px;
+        height: 100px
+    }
+}
+
+@media (max-width:450px) {
+    .smallimg {
+        display: none;
+    }
+    #mainimg {
+        display: none;
+    }
+    #phoneimgcontainer {
+        display: flex;
+        position: relative;
+        animation-name: scrolla;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+        animation-delay: 1s;
+        animation-fill-mode: both;
+    }
+    @keyframes scrolla {
+        0% {
+            right: 0
+        }
+        100% {
+            right: 600vw;
+        }
+    }
+    .phoneimg {
+        width: 100%;
+    }
+    #navbar {
+        justify-content: left;
+    }
+    #menu {
+        visibility: visible;
+        opacity: 1;
+    }
+    ul {
+        visibility: hidden;
+        opacity: 0;
+    }
+    ul {
+        margin-top: 50px;
+        visibility: hidden;
+        opacity: 0;
+        flex-direction: column;
+        position: relative;
+        left: -300px
+    }
+    .ulchange {
+        visibility: visible;
+        opacity: 1;
+        left: -5px
+    }
+    #navbar ul li {
+        background: rgba(156, 90, 243, 0.7);
+    }
+    .card {
+        padding: 11px;
+        font-size: 18px;
+        width: 290px;
+        margin: 4px;
+    }
+    .card img {
+        width: 270px;
+        height: 180px
+    }
+    .card h3 {
+        font-size: 25px;
+    }
+    iframe {
+        width: 330px;
+        height: 190px;
+        margin: 5px 0 5px 0;
+        border: 2px solid blue;
+    }
+    #heading {
+        font-size: 30px;
+    }
+    #contact div {
+        font-size: 17px;
+    }
+    .subheading {
+        font-size: 20px !important;
+    }
+    hr {
+        margin: 60px auto 60px auto
+    }
+    input {
+        width: 90%;
+    }
+    textarea {
+        width: 95%;
+        height: 130px;
+    }
+}
