@@ -161,7 +161,7 @@ hr {
 }
 
 .card {
-    opacity: 0;
+    opacity: 1;
     width: 390px;
     text-align: center;
     color: purple;
@@ -174,11 +174,6 @@ hr {
     margin: 20px;
     transition-duration: 1s;
     transform: rotate(0deg);
-}
-
-.inview2 {
-    opacity: 1;
-    transform: rotate(360deg);
 }
 
 .card img {
