@@ -25,6 +25,19 @@ function imgchange4() {
     document.getElementById('mainimg').src = 'https://static.vecteezy.com/system/resources/previews/002/484/718/large_2x/closeupgraphy-of-delicious-piece-of-cake-on-top-of-a-white-plate-free-photo.jpg'
 }
 
+function enlarge() {
+    document.getElementById('comment').style.transform = 'translate(-50%,-50%) scale(1, 1)'
+    document.getElementById('comment').style.visibility = 'visible';
+    document.getElementById('container').style.opacity = 0.2
+}
+
+function diminish() {
+    console.log('a')
+    document.getElementById('comment').style.transform = 'translate(-50%,-50%) scale(0.01, 0.01)'
+    document.getElementById('comment').style.visibility = 'hidden'
+    document.getElementById('container').style.opacity = 1
+}
+
 window.addEventListener('scroll', animation);
 var items = document.querySelectorAll('#mainimgcontainer')
 
