@@ -1,6 +1,10 @@
 <link rel='preconnect' href='https://fonts.googleapis.com'>
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 <link href='https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -12,111 +16,114 @@
 </head>
 
 <body>
-    <div id='navbar'>
-        <ul>
-            <li><a href='#'>HOMEPAGE</a></li>
-            <li><a href='#cards'>EXPLORE</a></li>
-            <li><a href='#recipes'>RECIPES</a></li>
-            <li><a href='#contact'>CONTACT US</a></li>
-            <li><a href='#comment'>COMMENT</a></li>
-        </ul>
+    <div id='container'>
+        <div id='navbar'>
+            <ul>
+                <li><a href='#'>HOMEPAGE</a></li>
+                <li><a href='#cards'>EXPLORE</a></li>
+                <li><a href='#recipes'>RECIPES</a></li>
+                <li><a href='#contact'>CONTACT US</a></li>
+                <li><a href='#comment' onclick='enlarge()'>COMMENT</a></li>
+            </ul>
+        </div>
+
+        <div id='menu' onclick='menuchange()'>
+            <div id='bar1' class='bar'></div>
+            <div id='bar2' class='bar'></div>
+            <div id='bar3' class='bar'></div>
+        </div>
+
+        <div id='heading'>A PINCH OF SALT</div>
+        <div id='homepage'>
+            <marquee scrollamount='8'>
+                <img class='smallimg' onclick='imgchange1()' src='https://static.vecteezy.com/system/resources/previews/001/397/455/large_2x/indian-style-of-italian-dish-paneer-pizza-free-photo.jpg'>
+                <img class='smallimg' onclick='imgchange2()' src='https://static.vecteezy.com/system/resources/previews/001/312/818/large_2x/vegetable-salad-on-wooden-background-free-photo.jpg'>
+                <img class='smallimg' onclick='imgchange3()' src='https://static.vecteezy.com/system/resources/previews/002/198/371/large_2x/sushi-roll-salmon-maki-free-photo.jpg'>
+                <img class='smallimg' onclick='imgchange4()' src='https://static.vecteezy.com/system/resources/previews/002/484/718/large_2x/closeupgraphy-of-delicious-piece-of-cake-on-top-of-a-white-plate-free-photo.jpg'>
+            </marquee>
+            <div id='mainimgcontainer'>
+                <img id='mainimg' src='https://static.vecteezy.com/system/resources/previews/001/397/455/large_2x/indian-style-of-italian-dish-paneer-pizza-free-photo.jpg'>
+            </div>
+            <div id='phoneimgcontainer'>
+                <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/000/708/297/large_2x/japanese-deep-fried-pork-cutlet-or-tonkatsu-japanese-food-photo.jpg'>
+                <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/000/704/176/large_2x/fish-biryani-with-basmati-rice-indian-food-photo.jpg'>
+                <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/197/638/large_2x/fettuccine-italian-food-on-white-plate-free-photo.jpg'>
+                <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/236/538/large_2x/hamburger-food-picture-free-photo.jpg'>
+                <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/087/662/large_2x/raw-meat-on-a-cutting-board-free-photo.jpg'>
+                <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/001/223/626/large_2x/indian-diwali-food-on-neutral-background-free-photo.jpg'>
+                <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/208/426/large_2x/pizza-topped-with-extra-cheese-and-basil-free-photo.jpg'>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id='cards'>
+            <div class='subheading'>EXPLORE</div>
+            <div class='card'>
+                <a href='#v1' onclick='iframe1()'><img src='https://www.eatwell101.com/wp-content/uploads/2019/04/Blackened-Chicken-and-Avocado-Salad-recipe-1.jpg'></a>
+                <a href='#v1' onclick='iframe1()'>
+                    <h3>CHICKEN SALAD</h3>
+                </a>
+                Chicken salad is undoubtedly a classic recipe. Diced chicken is tossed with creamy textures and dotted with crisp celery, green onion, and fresh grapes.
+            </div>
+
+            <div class='card'>
+                <a href='#v2' onclick='iframe2()'><img src='https://realhousemoms.com/wp-content/uploads/Strawberry-Cheesecake-IG.jpg'></a>
+                <a href='#v2' onclick='iframe2()'>
+                    <h3>STRAWBERRY CHEESCAKE</h3>
+                </a>
+                This Strawberry Cheesecake features a creamy cheesecake on a graham cracker crust topped with fresh strawberry sauce.
+            </div>
+
+            <div class='card'>
+                <a href='#v3' onclick='iframe3()'><img src='https://www.foodleclub.com/wp-content/uploads/2019/04/Chilli-tomato-sauce_edited-e1556202562554.jpg'></a>
+                <a href='#v3' onclick='iframe3()'>
+                    <h3>CHILLI TOMATO</h3>
+                </a>
+                Chilli tomato, a hot and spicy tomato preserve, coated with extra spicy chilli sauce, is one of the best tomato recipes.
+            </div>
+
+            <div class='card'>
+                <a href='#v4' onclick='iframe4()'><img src='https://www.superhealthykids.com/wp-content/uploads/2008/05/pita-bread-and-hummus.jpg'></a>
+                <a href='#v4' onclick='iframe4()'>
+                    <h3>HAMAS AND PITA BREAD</h3>
+                </a>
+                Hummus with pita bread is a classic middle eastern snack. Mediterranean speciality that is spread on warm pita bread or used as a dip which is protein-packed spread that is as delicious as it is healthy!
+            </div>
+
+            <div class='card'>
+                <a href='#v5' onclick='iframe5()'><img src='https://media-cdn.tripadvisor.com/media/photo-s/14/de/e9/6c/yummy-momos.jpg'></a>
+                <a href='#v5' onclick='iframe5()'>
+                    <h3>MOMOS</h3>
+                </a>
+                Momo is a type of steamed dumpling with some form of filling. Momo has become a traditional delicacy in Nepal, Tibet, as well as among Nepalese and Tibetan communities in Bhutan, as well as people of Darjeeling
+            </div>
+        </div>
+
+        <hr>
+
+        <div id='recipes'>
+            <div class='subheading'>RECIPES</div>
+            <iframe id='v1' src='https://www.youtube.com/embed/U9g5B7x6u6s' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+            <iframe id='v2' src='https://www.youtube.com/embed/FC5GwGRIpA0' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+            <iframe id='v3' src='https://www.youtube.com/embed/274YIeuADrk' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+            <iframe id='v4' src='https://www.youtube.com/embed/CwepoyYTBdk' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+            <iframe id='v5' src='https://www.youtube.com/embed/kfvXn1RMRpY' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+        </div>
+
+        <hr>
+
+        <div id='contact'>
+            <div class='subheading'>CONTACT US ON</div>
+            <div>Phone: +91 9871350890</div>
+            <div>Email: ayushsinghal6789@gmail.com</div>
+        </div>
+
+        <hr>
     </div>
-
-    <div id='menu' onclick='menuchange()'>
-        <div id='bar1' class='bar'></div>
-        <div id='bar2' class='bar'></div>
-        <div id='bar3' class='bar'></div>
-    </div>
-
-    <div id='heading'>A PINCH OF SALT</div>
-    <div id='homepage'>
-        <marquee scrollamount='8'>
-            <img class='smallimg' onclick='imgchange1()' src='https://static.vecteezy.com/system/resources/previews/001/397/455/large_2x/indian-style-of-italian-dish-paneer-pizza-free-photo.jpg'>
-            <img class='smallimg' onclick='imgchange2()' src='https://static.vecteezy.com/system/resources/previews/001/312/818/large_2x/vegetable-salad-on-wooden-background-free-photo.jpg'>
-            <img class='smallimg' onclick='imgchange3()' src='https://static.vecteezy.com/system/resources/previews/002/198/371/large_2x/sushi-roll-salmon-maki-free-photo.jpg'>
-            <img class='smallimg' onclick='imgchange4()' src='https://static.vecteezy.com/system/resources/previews/002/484/718/large_2x/closeupgraphy-of-delicious-piece-of-cake-on-top-of-a-white-plate-free-photo.jpg'>
-        </marquee>
-        <div id='mainimgcontainer'>
-            <img id='mainimg' src='https://static.vecteezy.com/system/resources/previews/001/397/455/large_2x/indian-style-of-italian-dish-paneer-pizza-free-photo.jpg'>
-        </div>
-        <div id='phoneimgcontainer'>
-            <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/000/708/297/large_2x/japanese-deep-fried-pork-cutlet-or-tonkatsu-japanese-food-photo.jpg'>
-            <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/000/704/176/large_2x/fish-biryani-with-basmati-rice-indian-food-photo.jpg'>
-            <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/197/638/large_2x/fettuccine-italian-food-on-white-plate-free-photo.jpg'>
-            <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/236/538/large_2x/hamburger-food-picture-free-photo.jpg'>
-            <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/087/662/large_2x/raw-meat-on-a-cutting-board-free-photo.jpg'>
-            <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/001/223/626/large_2x/indian-diwali-food-on-neutral-background-free-photo.jpg'>
-            <img class='phoneimg' src='https://static.vecteezy.com/system/resources/previews/002/208/426/large_2x/pizza-topped-with-extra-cheese-and-basil-free-photo.jpg'>
-        </div>
-    </div>
-
-    <hr>
-
-    <div id='cards'>
-        <div class='subheading'>EXPLORE</div>
-        <div class='card'>
-            <a href='#v1' onclick='iframe1()'><img src='https://www.eatwell101.com/wp-content/uploads/2019/04/Blackened-Chicken-and-Avocado-Salad-recipe-1.jpg'></a>
-            <a href='#v1' onclick='iframe1()'>
-                <h3>CHICKEN SALAD</h3>
-            </a>
-            Chicken salad is undoubtedly a classic recipe. Diced chicken is tossed with creamy textures and dotted with crisp celery, green onion, and fresh grapes.
-        </div>
-
-        <div class='card'>
-            <a href='#v2' onclick='iframe2()'><img src='https://realhousemoms.com/wp-content/uploads/Strawberry-Cheesecake-IG.jpg'></a>
-            <a href='#v2' onclick='iframe2()'>
-                <h3>STRAWBERRY CHEESCAKE</h3>
-            </a>
-            This Strawberry Cheesecake features a creamy cheesecake on a graham cracker crust topped with fresh strawberry sauce.
-        </div>
-
-        <div class='card'>
-            <a href='#v3' onclick='iframe3()'><img src='https://www.foodleclub.com/wp-content/uploads/2019/04/Chilli-tomato-sauce_edited-e1556202562554.jpg'></a>
-            <a href='#v3' onclick='iframe3()'>
-                <h3>CHILLI TOMATO</h3>
-            </a>
-            Chilli tomato, a hot and spicy tomato preserve, coated with extra spicy chilli sauce, is one of the best tomato recipes.
-        </div>
-
-        <div class='card'>
-            <a href='#v4' onclick='iframe4()'><img src='https://www.superhealthykids.com/wp-content/uploads/2008/05/pita-bread-and-hummus.jpg'></a>
-            <a href='#v4' onclick='iframe4()'>
-                <h3>HAMAS AND PITA BREAD</h3>
-            </a>
-            Hummus with pita bread is a classic middle eastern snack. Mediterranean speciality that is spread on warm pita bread or used as a dip which is protein-packed spread that is as delicious as it is healthy!
-        </div>
-
-        <div class='card'>
-            <a href='#v5' onclick='iframe5()'><img src='https://media-cdn.tripadvisor.com/media/photo-s/14/de/e9/6c/yummy-momos.jpg'></a>
-            <a href='#v5' onclick='iframe5()'>
-                <h3>MOMOS</h3>
-            </a>
-            Momo is a type of steamed dumpling with some form of filling. Momo has become a traditional delicacy in Nepal, Tibet, as well as among Nepalese and Tibetan communities in Bhutan, as well as people of Darjeeling
-        </div>
-    </div>
-
-    <hr>
-
-    <div id='recipes'>
-        <div class='subheading'>RECIPES</div>
-        <iframe id='v1' src='https://www.youtube.com/embed/U9g5B7x6u6s' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-        <iframe id='v2' src='https://www.youtube.com/embed/FC5GwGRIpA0' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-        <iframe id='v3' src='https://www.youtube.com/embed/274YIeuADrk' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-        <iframe id='v4' src='https://www.youtube.com/embed/CwepoyYTBdk' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-        <iframe id='v5' src='https://www.youtube.com/embed/kfvXn1RMRpY' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
-    </div>
-
-    <hr>
-
-    <div id='contact'>
-        <div class='subheading'>CONTACT US ON</div>
-        <div>Phone: +91 9871350890</div>
-        <div>Email: ayushsinghal6789@gmail.com</div>
-    </div>
-
-    <hr>
 
     <div id='comment'>
+        <a href='#a' id='close' onclick="diminish()">X</a>
         <div class='subheading'>COMMENT</div>
         <form id='form'>
             <label for='name' name='name'>NAME:</label>
@@ -126,8 +133,6 @@
             <input type='submit'>
         </form>
     </div>
-
-    <hr>
 
     <script src='https://www.gstatic.com/firebasejs/8.7.1/firebase.js'></script>
     <script src="script.js"></script>
