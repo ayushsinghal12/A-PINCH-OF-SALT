@@ -32,7 +32,6 @@ function enlarge() {
 }
 
 function diminish() {
-    console.log('a')
     document.getElementById('comment').style.transform = 'translate(-50%,-50%) scale(0.01, 0.01)'
     document.getElementById('comment').style.visibility = 'hidden'
     document.getElementById('container').style.opacity = 1
@@ -88,3 +87,31 @@ function iframe4() {
 function iframe5() {
     document.getElementsByTagName('iframe')[4].src = 'https://www.youtube.com/embed/kfvXn1RMRpY?autoplay=1'
 }
+
+var images = [
+    'https://static.vecteezy.com/system/resources/previews/000/708/297/large_2x/japanese-deep-fried-pork-cutlet-or-tonkatsu-japanese-food-photo.jpg',
+    'https://static.vecteezy.com/system/resources/previews/000/704/176/large_2x/fish-biryani-with-basmati-rice-indian-food-photo.jpg',
+    'https://static.vecteezy.com/system/resources/previews/002/197/638/large_2x/fettuccine-italian-food-on-white-plate-free-photo.jpg',
+    'https://static.vecteezy.com/system/resources/previews/002/236/538/large_2x/hamburger-food-picture-free-photo.jpg',
+    'https://static.vecteezy.com/system/resources/previews/002/087/662/large_2x/raw-meat-on-a-cutting-board-free-photo.jpg',
+    'https://static.vecteezy.com/system/resources/previews/001/223/626/large_2x/indian-diwali-food-on-neutral-background-free-photo.jpg',
+    'https://static.vecteezy.com/system/resources/previews/002/208/426/large_2x/pizza-topped-with-extra-cheese-and-basil-free-photo.jpg'
+]
+
+var time = 3000
+var i = 0
+var ref = document.getElementsByClassName('phoneimg')[0]
+console.log(ref)
+ref.src = images[i]
+
+function image() {
+
+    if (i < images.length - 1) {
+        i++
+    } else {
+        i = 0
+    }
+    ref.src = images[i]
+}
+
+setInterval('image()', time)
