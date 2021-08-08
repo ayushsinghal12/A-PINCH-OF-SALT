@@ -522,21 +522,6 @@ textarea {
     #phoneimgcontainer {
         display: flex;
         position: relative;
-        animation-name: scrolla;
-        animation-duration: 30s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-direction: alternate;
-        animation-delay: 1s;
-        animation-fill-mode: both;
-    }
-    @keyframes scrolla {
-        0% {
-            right: 0
-        }
-        100% {
-            right: 600vw;
-        }
     }
     .phoneimg {
         width: 100%;
